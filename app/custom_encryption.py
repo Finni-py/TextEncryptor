@@ -48,10 +48,17 @@ encryption_funcs = [
 ]
 
 
-def get_random_funcs(arg_stock: tuple[str, str]) -> tuple[str, str]:
+def get_random_funcs(arg_stock: tuple[str, str], size: int = 2) -> tuple[str, str]:
     # Применяет случайное количество (от 10 до 50) случайных функций из списка к аргументу
     arg = arg_stock
-    random_num = random.randint(10, 50)
+    if size == 2:
+        random_num = random.randint(8, 20)
+    elif size == 3:
+        random_num = random.randint(15, 50)
+    else:
+        print('[+] Отмена зашифровки custom')
+        return arg
+
     for _ in range(random_num):
         random_func = random.choice(encryption_funcs)
         arg = random_func(arg)
