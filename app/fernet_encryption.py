@@ -24,18 +24,22 @@ class FernetEncryptor:
         return decrypted_message.decode()
 
 
-def get_encrypt_text(text: str) -> tuple[str, str]:
+def get_encrypt_text_fernet(text: str) -> tuple[str, str]:
     # Вызывает encrypt_text_with_fernet
     fernet_obj = FernetEncryptor()
     key, encrypted = fernet_obj.encrypt_text_with_fernet(text)
+    print('[+] Зашифровано fernet')
     return key, encrypted
 
 
-def get_decrypt_text(encrypted_text: str, key: str) -> str:
+def get_decrypt_text_fernet(encrypted_text: str, key: str) -> str:
     # Вызывает decrypt_text_with_fernet
     fernet_obj = FernetEncryptor(key=key)
     try:
         decrypted = fernet_obj.decrypt_text_with_fernet(encrypted_text)
-    except InvalidToken:
+        print('[+] Расшифровано fernet')
+    except (InvalidToken, ValueError):
         decrypted = "❌ Невозможно расшифровать: неверный ключ или повреждённое сообщение."
+        print('[!] Ошибка расшифровки fernet')
     return decrypted
+
