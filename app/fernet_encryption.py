@@ -29,11 +29,11 @@ def get_encrypt_text_fernet(text: str) -> tuple[str, str]:
     fernet_obj = FernetEncryptor()
     key, encrypted = fernet_obj.encrypt_text_with_fernet(text)
     print('[+] Зашифровано fernet')
-    return key, encrypted
+    return encrypted, key
 
 
 def get_decrypt_text_fernet(encrypted_text: str, key: str) -> str:
-    # Вызывает decrypt_text_with_fernet
+    # Передаём ключ и шифротекст как строки, без повторного .encode()
     fernet_obj = FernetEncryptor(key=key)
     try:
         decrypted = fernet_obj.decrypt_text_with_fernet(encrypted_text)
@@ -42,4 +42,3 @@ def get_decrypt_text_fernet(encrypted_text: str, key: str) -> str:
         decrypted = "❌ Невозможно расшифровать: неверный ключ или повреждённое сообщение."
         print('[!] Ошибка расшифровки fernet')
     return decrypted
-
