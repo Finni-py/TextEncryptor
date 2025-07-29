@@ -17,30 +17,34 @@
 - [cryptography (Fernet)](https://cryptography.io/en/latest/)
 - Стандартная библиотека Python
 
-# Установка
+## Установка
 
-### Создание виртуального окружения (рекомендуется)
-```bash
-python -m venv venv
-```
-### Windows:
+1. Клонируйте репозиторий:
 
-```bash
-venv\Scripts\activate
-```
-### macOS/Linux:
+   ```bash
+   git clone https://github.com/finniy/ip-tracker-bot.git
+   cd ip-tracker-bot
 
-```bash
-source venv/bin/activate
-```
-### Установка зависимостей
-```bash
-pip install -r requirements.txt
-```
-### Запуск бота
-```bash
-python app/main.py
-```
+
+2. Установите зависимости:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Создайте файл `.env` и добавьте в него ваш API ключ Telegram:
+
+   ```
+   API_KEY=ваш_токен_бота
+   ```
+
+4. Запустите бота:
+
+   ```bash
+   python bot.py
+   ```
+
+---
 
 ## Команды бота
 

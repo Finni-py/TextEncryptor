@@ -27,4 +27,4 @@ encrypt_second_text = (
     "✏️ Отлично! Теперь отправь сообщение, которое хочешь зашифровать."
 )
 
-github_link_text = "🔗 Репозиторий проекта: https://github.com/Finni-py/TextEncryptor"
+github_link_text = "🔗 Репозиторий проекта: https://github.com/finniy/TextEncryptor"
