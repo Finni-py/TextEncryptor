@@ -22,8 +22,8 @@
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/finniy/ip-tracker-bot.git
-   cd ip-tracker-bot
+   git clone https://github.com/finniy/TextEncryptor.git
+   cd TextEncryptor
 
 
 2. Установите зависимости:
