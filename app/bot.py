@@ -2,11 +2,11 @@ import telebot
 from telebot.types import Message
 from telebot import types
 
-from config import API_KEY
-from text_fot_bot import *
-from custom_decryption import get_stock_crypt
-from custom_encryption import get_random_funcs
-from fernet_encryption import get_encrypt_text_fernet, get_decrypt_text_fernet
+from app.config import API_KEY
+from app.text_fot_bot import *
+from app.custom_decryption import get_stock_crypt
+from app.custom_encryption import get_random_funcs
+from app.fernet_encryption import get_encrypt_text_fernet, get_decrypt_text_fernet
 
 bot = telebot.TeleBot(API_KEY)
 commands = [
