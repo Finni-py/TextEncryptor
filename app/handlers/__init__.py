@@ -1,3 +1,3 @@
-import decrypt_handler
-import encrypt_handler
-import start_handler
+import app.handlers.decrypt_handler
+import app.handlers.encrypt_handler
+import app.handlers.start_handler

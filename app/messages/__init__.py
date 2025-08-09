@@ -1,1 +1,1 @@
-import message_text
+import app.messages.message_text
