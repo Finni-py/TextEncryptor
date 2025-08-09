@@ -2,6 +2,8 @@
 
 Простой **Telegram-бот** для шифрования и расшифровки сообщений, использующий библиотеку **Fernet** и кастомные методы.
 
+---
+
 ## 🚀 Возможности
 
 - 🔐 Шифрование текста с генерацией ключа
@@ -20,27 +22,29 @@
 ![🛡️ Fernet](https://img.shields.io/badge/🛡️-Fernet-05122A?style=flat)
 ![python-dotenv](https://img.shields.io/badge/%F0%9F%8C%BF-python--dotenv-05122A?style=flat)
 
+---
+
 ## 🗂️ Структура проекта
 
 ```
 TextEncryptor/
 └── app/
-    ├── handlers/                 # Папка с обработчиками команд и сообщений
-    │   ├── __init__.py           # Инициализация пакета handlers
-    │   ├── decrypt_handler.py    # Обработчик для расшифровки текста
-    │   ├── encrypt_handler.py    # Обработчик для шифрования текста
-    │   └── start_handler.py      # Обработчик команды /start
-    ├── messages/                 # Тексты сообщений, шаблоны для ответов бота
-    │   ├── __init__.py           # Инициализация пакета messages
-    │   └── message_text.py       # Хранение текстов сообщений для бота
-    ├── utils/                    # Вспомогательные утилиты и алгоритмы
-    │   ├── __init__.py           # Инициализация пакета utils
-    │   ├── custom_decryption.py  # Функции для кастомной расшифровки
-    │   ├── custom_encryption.py  # Функции для кастомного шифрования
-    │   └── fernet_cryption.py    # Шифрование/расшифровка с использованием fernet
-    ├── bot_instance.py           # Инициализация и настройка экземпляра Telegram-бота
-    ├── config.py                 # Конфигурационные параметры проекта (токены, настройки)
-    ├── telegram_bot.py           # Основной модуль бота, обработка обновлений и запуск
+    ├── handlers/
+    │   ├── __init__.py
+    │   ├── decrypt_handler.py
+    │   ├── encrypt_handler.py
+    │   └── start_handler.py
+    ├── messages/ 
+    │   ├── __init__.py  
+    │   └── message_text.py    
+    ├── utils/               
+    │   ├── __init__.py      
+    │   ├── custom_decryption.py  
+    │   ├── custom_encryption.py 
+    │   └── fernet_cryption.py   
+    ├── bot_instance.py      
+    ├── config.py         
+    ├── telegram_bot.py     
     ├── README.md
     ├── .env
     └── .gitignore
@@ -54,8 +58,8 @@ TextEncryptor/
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/yourusername/telegram-encryption-bot.git
-cd telegram-encryption-bot
+git clone https://https://github.com/finniy/TextEncryptor.git
+cd TextEncryptor
 ```
 
 ### 2. Создание виртуального окружения (рекомендуется)
@@ -106,6 +110,8 @@ python app/main.py
 ## 📄 Лицензия
 
 Проект распространяется под лицензией MIT. Свободно используй, дорабатывай и распространяй с указанием авторства.
+
+---
 
 ## 👤 Автор
 
