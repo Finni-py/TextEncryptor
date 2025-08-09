@@ -1,3 +1,5 @@
+from app.logger import logger
+
 def decrypt_func_1(arg: tuple[str, str]) -> tuple[str, str]:
     # Обратная операция к перевороту строки: снова переворачивает сообщение
     message, key = arg
@@ -53,5 +55,5 @@ def get_stock_crypt(arg: tuple[str, str]) -> tuple[str, str]:
             message, key = decrypt_func_6((message, key))
         else:
             break
-    print('[+] Расшифровано custom')
+    logger.info('Расшифровано custom')
     return message, key

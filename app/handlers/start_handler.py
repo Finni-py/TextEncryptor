@@ -9,7 +9,6 @@ def start(message: Message) -> None:
     # Обрабатывает команду /start — приветствует пользователя и показывает клавиатуру с кнопками
     nickname = message.from_user.username
     user_name = message.from_user.first_name or "друг"
-    print(f'[+] {nickname} запустил бота')
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button_1 = types.KeyboardButton('/encrypt')

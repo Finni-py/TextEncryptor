@@ -1,7 +1,7 @@
 import random
 import string
 
-
+from app.logger import logger
 def encrypt_func_1(arg: tuple[str, str]) -> tuple[str, str]:
     # Функция переворачивает сообщение и добавляет 'z' к ключу
     message, key = arg
@@ -56,11 +56,11 @@ def get_random_funcs(arg_stock: tuple[str, str], size: int = 2) -> tuple[str, st
     elif size == 3:
         random_num = random.randint(15, 50)
     else:
-        print('[+] Отмена зашифровки custom')
+        logger.error('Отмена зашифровки custom')
         return arg
 
     for _ in range(random_num):
         random_func = random.choice(encryption_funcs)
         arg = random_func(arg)
-    print('[+] Зашифровано custom')
+    logger.info('Зашифровано custom')
     return arg

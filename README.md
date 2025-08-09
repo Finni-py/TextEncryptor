@@ -20,6 +20,7 @@
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)
 ![pyTelegramBotAPI](https://img.shields.io/badge/pyTelegramBotAPI-05122A?style=flat&logo=telegram)
 ![🛡️ Fernet](https://img.shields.io/badge/🛡️-Fernet-05122A?style=flat)
+![logger](https://img.shields.io/badge/%E2%9A%A0-logger-05122A?style=flat&logo=logging)
 ![python-dotenv](https://img.shields.io/badge/%F0%9F%8C%BF-python--dotenv-05122A?style=flat)
 
 ---
@@ -43,7 +44,8 @@ TextEncryptor/
     │   ├── custom_encryption.py 
     │   └── fernet_cryption.py   
     ├── bot_instance.py      
-    ├── config.py         
+    ├── config.py    
+    ├── logger.py         
     ├── telegram_bot.py     
     ├── README.md
     ├── .env
