@@ -24,17 +24,27 @@
 
 ```
 TextEncryptor/
-├── app/
-│   ├── bot.py                 # Основная логика Telegram-бота
-│   ├── config.py              # API ключ и настройки
-│   ├── custom_decryption.py   # Кастомная расшифровка
-│   ├── custom_encryption.py   # Кастомное шифрование
-│   ├── fernet_encryption.py   # Шифрование через Fernet
-│   └── text_fot_bot.py        # Тексты для сообщений
-├── main.py                    # Точка входа
-├── README.md
-├── .env
-└── .gitignore
+└── app/
+    ├── handlers/                 # Папка с обработчиками команд и сообщений
+    │   ├── __init__.py           # Инициализация пакета handlers
+    │   ├── decrypt_handler.py    # Обработчик для расшифровки текста
+    │   ├── encrypt_handler.py    # Обработчик для шифрования текста
+    │   └── start_handler.py      # Обработчик команды /start
+    ├── messages/                 # Тексты сообщений, шаблоны для ответов бота
+    │   ├── __init__.py           # Инициализация пакета messages
+    │   └── message_text.py       # Хранение текстов сообщений для бота
+    ├── utils/                    # Вспомогательные утилиты и алгоритмы
+    │   ├── __init__.py           # Инициализация пакета utils
+    │   ├── custom_decryption.py  # Функции для кастомной расшифровки
+    │   ├── custom_encryption.py  # Функции для кастомного шифрования
+    │   └── fernet_cryption.py    # Шифрование/расшифровка с использованием fernet
+    ├── bot_instance.py           # Инициализация и настройка экземпляра Telegram-бота
+    ├── config.py                 # Конфигурационные параметры проекта (токены, настройки)
+    ├── telegram_bot.py           # Основной модуль бота, обработка обновлений и запуск
+    ├── README.md
+    ├── .env
+    └── .gitignore
+
 ```
 
 ---

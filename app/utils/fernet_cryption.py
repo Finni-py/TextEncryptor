@@ -1,5 +1,7 @@
 from cryptography.fernet import Fernet, InvalidToken
 
+from app.messages.message_text import CANT_DECRYPT
+
 
 class FernetEncryptor:
     def __init__(self, key: str = None):
@@ -39,6 +41,6 @@ def get_decrypt_text_fernet(encrypted_text: str, key: str) -> str:
         decrypted = fernet_obj.decrypt_text_with_fernet(encrypted_text)
         print('[+] Расшифровано fernet')
     except (InvalidToken, ValueError):
-        decrypted = "❌ Невозможно расшифровать: неверный ключ или повреждённое сообщение."
+        decrypted = CANT_DECRYPT
         print('[!] Ошибка расшифровки fernet')
     return decrypted
