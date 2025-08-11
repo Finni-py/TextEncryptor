@@ -53,6 +53,9 @@ TextEncryptor/
 │   ├── logger.py
 │   ├── telegram_bot.py
 │
+├── images/
+│   ├── Photo1.png
+│   └── Photo2.png
 ├── .env
 ├── .env.template
 ├── .gitignore
