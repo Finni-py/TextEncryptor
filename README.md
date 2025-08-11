@@ -29,27 +29,36 @@
 
 ```
 TextEncryptor/
-└── app/
-    ├── handlers/
-    │   ├── __init__.py
-    │   ├── decrypt_handler.py
-    │   ├── encrypt_handler.py
-    │   └── start_handler.py
-    ├── messages/ 
-    │   ├── __init__.py  
-    │   └── message_text.py    
-    ├── utils/               
-    │   ├── __init__.py      
-    │   ├── custom_decryption.py  
-    │   ├── custom_encryption.py 
-    │   └── fernet_cryption.py   
-    ├── bot_instance.py      
-    ├── config.py    
-    ├── logger.py         
-    ├── telegram_bot.py     
-    ├── README.md
-    ├── .env
-    └── .gitignore
+│
+├── app/
+│   │
+│   ├── handlers/
+│   │   ├── __init__.py
+│   │   ├── decrypt_handler.py
+│   │   ├── encrypt_handler.py
+│   │   └── start_handler.py
+│   │
+│   ├── messages/
+│   │   ├── __init__.py
+│   │   └── message_text.py
+│   │
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── custom_decryption.py
+│   │   ├── custom_encryption.py
+│   │   └── fernet_cryption.py
+│   │
+│   ├── bot_instance.py
+│   ├── config.py
+│   ├── logger.py
+│   ├── telegram_bot.py
+│
+├── .env
+├── .env.template
+├── .gitignore
+├── main.py
+├── README.md
+└── requirements.txt
 
 ```
 
@@ -64,33 +73,27 @@ git clone https://https://github.com/finniy/TextEncryptor.git
 cd TextEncryptor
 ```
 
-### 2. Создание виртуального окружения (рекомендуется)
+2. Создайте и активируйте виртуальное окружение
 
 ```bash
 python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
 ```
 
-### 3. Активация виртуального окружения
-
-**Windows:**
-
-```bash
-venv\Scripts\activate
-```
-
-**macOS/Linux:**
-
-```bash
-source venv/bin/activate
-```
-
-### 4. Установка зависимостей
+3. Установите зависимости
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Запуск бота
+4. Укажите токен бота в `.env`
+
+```bash
+API_KEY=YOUR_TELEGRAM_BOT_TOKEN
+```
+
+5. Запустите бота
 
 ```bash
 python main.py
