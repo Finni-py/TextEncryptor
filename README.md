@@ -127,6 +127,8 @@ python main.py
 
 ## 👤 Автор
 
+🚀 **[Перейти к боту в Telegram](https://t.me/Text_Encryptor_Python_bot)**
+
 - GitHub: [@finniy](https://github.com/finniy)
 - Telegram: [@fjnnjk](https://t.me/fjnnjk)
 
